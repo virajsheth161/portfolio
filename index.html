@@ -12,13 +12,15 @@
         <div class="container"></div>   
         <nav>
             <img src="/image/VIRAJ.jpg" class="logo">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Portfolio</a></li>
-                <li><a href="#">Contact</a></li>
+            <ul id="sidemeu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#protfolio">Portfolio</a></li>
+                <li><a href="#Contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
             </ul>
+            <i class="fa-solid fa-bars" onclick="opanmenu()"></i>
         </nav>
         <div class="header-text">
         <p>cloud & App development intern</p>
@@ -26,7 +28,7 @@
     </div>    
     </div>
  <!-- -------------------------------------------------------------->
-<div class="about">
+<div id="about">
     <div class="container">
         <div class="row">
             <div class="about-col-1">
@@ -139,10 +141,30 @@
 <div id="Contact">
     <div class="container">
         <div class="row">
-            <div class="contact-left"></div>
-            <div class="contact-rigth"></div>
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i> virajsheth161@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+91 8866357125</p>
+                <div class="social-icon">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <a href="viraj_resume.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-rigth">
+                <form>
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
         </div>
     </div>
+    <!-- <div class="copyright">
+        <p>copyright kavin. made for easy tutorials </p>
+    </div> -->
 </div>
 
 
@@ -160,7 +182,18 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab")
     }
-</script>    
+</script> 
+<script>
+    var sidemeu = document.getElementById("sidemeu");
+    function opanmenu(){
+        sidemeu.style.right = "0";
+    }
+    function closemenu(){
+        sidemeu.style.right = "-200px";
+    }
+</script>
+
+
 </body>
 </html>
   
